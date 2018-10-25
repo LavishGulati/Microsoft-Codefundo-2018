@@ -2084,7 +2084,6 @@
 
 	input[type="text"],
 	input[type="tel"],
-	input[type="time"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -2100,6 +2099,22 @@
 		padding: 0 1rem;
 		text-decoration: none;
 		width: 100%;
+	}
+
+	input[type="time"]{
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		border-radius: 4px;
+		border: none;
+		border: solid 1px;
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0 1rem;
+		text-decoration: none;
+		width: 40%;
 	}
 
 		input[type="text"]:invalid,
@@ -2374,60 +2389,25 @@
 			display: none;
 		}
 
-/* Image */
-
-	.image {
-		display: inline-block;
-		position: relative;
+	.l1 img{
+		width: 100%;
+		float: left;
 	}
 
-		.image.flush {
-			margin: 0 !important;
-		}
+	.r1 img{
+		width: 102%;
+		float: right;
+	}
 
-		.image img {
-			display: block;
-		}
+	.l2 img{
+		width: 110%;
+		float: left;
+	}
 
-		.image.left, .image.right {
-			max-width: 50%;
-		}
-
-			.image.left img, .image.right img {
-				width: 100%;
-			}
-
-		.image.left {
-			float: left;
-			margin: 0 1rem 1rem 0;
-			top: 0.25rem;
-		}
-
-		.image.right {
-			float: right;
-			margin: 0 0 1rem 1rem;
-			top: 0.25rem;
-		}
-
-		.image.fit {
-			display: block;
-			margin: 0 0 2rem 0;
-			width: 100%;
-		}
-
-			.image.fit img {
-				width: 100%;
-			}
-
-		.image.main {
-			display: block;
-			margin: 0 0 3rem 0;
-			width: 100%;
-		}
-
-			.image.main img {
-				width: 100%;
-			}
+	.r2 img{
+		width: 100%;
+		float: right;
+	}
 
 /* List */
 
@@ -3160,7 +3140,7 @@
 			}
 
 		#footer .copyright {
-			color: #bbb;
+			color: #A9A9A9;
 			font-size: 0.9rem;
 			margin: 0 0 2rem 0;
 			padding: 0 1rem;
