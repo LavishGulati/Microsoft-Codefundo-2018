@@ -1814,7 +1814,7 @@ ul.icons {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: url("../../images/banner.jpg");
+  background-image: url("../../../Images/Homepage/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2064,7 +2064,7 @@ ul.icons {
   background-color: #ce1b28;
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(../../images/cta01.jpg);
+  background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(../../../Images/Homepage/cta01.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2395,7 +2395,7 @@ body {
   padding-top: 3.25rem; }
   body:before {
     content: ' ';
-    background-image: url(../../images/bg.jpg);
+    background-image: url(../../../Images/Homepage/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -2502,7 +2502,7 @@ body {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/banner.jpg");
+  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../../Images/Homepage/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
