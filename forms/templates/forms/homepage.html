@@ -6,12 +6,13 @@
 -->
 <html>
 	<head>
+		{% load staticfiles %}
 		<title>404 Disaster Not Found</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="Assets/Homepage/css/main.css" />
+		<link rel="stylesheet" href="{% static 'Assets/Homepage/css/main.css' %}" />
 	</head>
 	<body class="is-preload">
 
@@ -36,13 +37,14 @@
 			<section id="banner">
 				<div class="inner">
 					<h1>404 Disaster Not Found</h1>
-					<p>A disaster-victim centric technological approach to disaster prediction, prevention <br />and management. Find out about the
+					<p>A disaster-victim centric technological approach to disaster prediction, prevention <br />and management. Find out about <thead></thead>
 					upcoming disasters in your locality and the world.
 					<br />
 					Help or reach out for help if you are in a disaster hit area.
 					</p>
 				</div>
-				<video autoplay loop muted playsinline src="Images/Homepage/banner.mp4"></video>
+				{# <video autoplay loop muted playsinline src="Images/Homepage/banner.mp4"></video> #}
+				<source src="{% static 'Images/Homepage/banner.mp4' %}" type='video/mp4'></source>
 			</section>
 
 		<!-- Highlights -->
@@ -60,7 +62,7 @@
 								<h3>REGISTER AS A VOLUNTEER</h3>
 							</header>
 							<p>Lend a helping hand to those who are in need. Volunteers provide a greatly needed human touch to the operation.</p>
-							<a href="regAsVol.html" class="button primary">Register Now!</a>
+							<a href="{% url 'RegisterPage' %}" class="button primary">Register Now!</a>
 						</div>
 					</section>
 					<section>
@@ -80,7 +82,7 @@
 								<h3>REGISTERED REQUESTS</h3>
 							</header>
 							<p>Want to help but are overwelmed by large bureaucracy? Have a look at the people in trouble and see how you can directly help individuals</p>
-							<a href="#" class="button primary">See Requests!</a>
+							<a href="{% url 'getRegister' %}" class="button primary">See Requests!</a>
 						</div>
 					</section>
 
@@ -131,7 +133,7 @@
 							</blockquote>
 							<div class="author">
 								<div class="image">
-									<img src="Images/Homepage/pic01.jpg" alt="" />
+									<img src="{% static 'Images/Homepage/pic01.jpg' %}" alt="" />
 								</div>
 								<p class="credit">- <strong>Lavish Gulati</strong> Founder<span></span></p>
 							</div>
@@ -144,7 +146,7 @@
 							</blockquote>
 							<div class="author">
 								<div class="image">
-									<img src="Images/Homepage/pic03.jpg" alt="" />
+									<img src="{% static 'Images/Homepage/pic03.jpg' %}" alt="" />
 								</div>
 								<p class="credit">- <strong>Mayank Baranwal</strong> Founder<span></span></p>
 							</div>
@@ -157,7 +159,7 @@
 							</blockquote>
 							<div class="author">
 								<div class="image">
-									<img src="Images/Homepage/pic02.jpg" alt="" />
+									<img src="{% static 'Images/Homepage/pic02.jpg' %}" alt="" />
 								</div>
 								<p class="credit">- <strong>Chirag Gupta</strong> Founder<span></span></p>
 							</div>
@@ -202,11 +204,11 @@
 		</footer>
 
 		<!-- Scripts -->
-			<script src="Assets/Homepage/js/jquery.min.js"></script>
-			<script src="Assets/Homepage/js/browser.min.js"></script>
-			<script src="Assets/Homepage/js/breakpoints.min.js"></script>
-			<script src="Assets/Homepage/js/util.js"></script>
-			<script src="Assets/Homepage/js/main.js"></script>
+			<script src="{% static 'Assets/Homepage/js/jquery.min.js' %}"></script>
+			<script src="{% static 'Assets/Homepage/js/browser.min.js' %}"></script>
+			<script src="{% static 'Assets/Homepage/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'Assets/Homepage/js/util.js' %}"></script>
+			<script src="{% static 'Assets/Homepage/js/main.js' %}"></script>
 
 	</body>
 </html>

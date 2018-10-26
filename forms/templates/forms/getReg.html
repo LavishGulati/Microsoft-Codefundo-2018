@@ -1,0 +1,14 @@
+{% if all_registers %}
+	<ul>
+		{% for registers in all_registers %}
+
+		<li>{{registers.name }}</li>
+
+		{% endfor %}
+		
+	</ul>
+
+{% else %}
+	<h3> You don't have any registers </h3>
+
+{% endif %}

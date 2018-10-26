@@ -6,10 +6,11 @@
 -->
 <html>
 	<head>
+		{% load staticfiles %}
 		<title>Register As A Volunteer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="Assets/RegAsVol/css/main.css" />
+		<link rel="stylesheet" href="{% static 'Assets/RegAsVol/css/main.css' %}" />
 	</head>
 	<body>
 
@@ -28,6 +29,7 @@
 							<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel. Vestibulum et efficitur urna. Duis velit nulla, interdum sed felis sit amet, facilisis auctor nunc. Cras luctus urna at risus feugiat scelerisque nec sed diam. </p>
 
 							<form method="post" action="#">
+							{% csrf_token %}
 								<div class="row uniform">
 									<div class="6u 12u$(xsmall)">
 										<input type="text" name="name" id="name" value="" placeholder="Name" />
@@ -36,32 +38,13 @@
 										<input type="tel" name="contact" id="contact" value="" placeholder="Contact" />
 									</div>
 									<!-- Break -->
-									<div class="6u$ 12u$(xsmall)">
-										<div class="select-wrapper">
-											<select name="category" id="category">
-												<option value="">Profession</option>
-												<option value="1">Doctor/Pharmacist</option>
-												<option value="1">Engineer</option>
-												<option value="1">Businessman</option>
-												<option value="1">Insurance Consultant</option>
-												<option value="1">Teacher/Professor</option>
-												<option value="1">Lawyer</option>
-												<option value="1">Accountant</option>
-												<option value="1">Police/Army</option>
-												<option value="1">Other</option>
-											</select>
-											<br>
-										</div>
+
+									<div class="12u$">
+										<input type="text" name="profession" id="profession" value="" placeholder="Profession" />
 									</div>
 
-									<div class="6u$ 12u$(xsmall)">
-										<p>Available Time Slot<br>
-										From
-										<input type="time" name="time" id="time" placeholder="From" />
-										To
-										<input type="time" name="time" id="time" placeholder="From" />
-										<br></p>
-									</div>
+
+									
 
 									<div class="6u$ 12u$(xsmall)">
 										<input type="text" name="location" id="location" placeholder="Location" />
@@ -73,7 +56,7 @@
 										<textarea name="message" id="message" placeholder="How can you help?" rows="6"></textarea>
 										<br>
 									</div>
-
+<!--
 									<div class="6u 12u$(small)">
 										<input type="checkbox" id="copy" name="copy">
 										<label for="copy">Email me a copy of this message</label>
@@ -83,7 +66,7 @@
 										<input type="checkbox" id="human" name="human" checked>
 										<label for="human">I am a human and not a robot</label>
 										<br>
-									</div>
+									</div> -->
 									<!-- Break -->
 									<div class="12u$">
 										<ul class="actions">
@@ -108,22 +91,22 @@
 							<div class="gallery">
 								<div>
 									<div class="l1">
-										<a href="Images/RegAsVol/pic03.jpg"><img src="Images/RegAsVol/pic03.jpg" alt="" /></a>
+										<a href="{% static 'Images/RegAsVol/pic03.jpg' %}"><img src="{% static 'Images/RegAsVol/pic03.jpg' %}" alt="" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image right r1">
-										<a href="Images/RegAsVol/pic01.jpg"><img src="Images/RegAsVol/pic01.jpg" alt="" /></a>
+										<a href="{% static 'Images/RegAsVol/pic01.jpg' %}"><img src="{% static 'Images/RegAsVol/pic01.jpg' %}" alt="" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image left l2">
-										<a href="Images/RegAsVol/pic04.jpg"><img src="Images/RegAsVol/pic04.jpg" alt="" /></a>
+										<a href="{% static 'Images/RegAsVol/pic04.jpg' %}"><img src="{% static 'Images/RegAsVol/pic04.jpg' %}" alt="" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image right r2">
-										<a href="Images/RegAsVol/pic05.jpg"><img src="Images/RegAsVol/pic05.jpg" alt="" /></a>
+										<a href="{% static 'Images/RegAsVol/pic05.jpg' %}"><img src="{% static 'Images/RegAsVol/pic05.jpg' %}" alt="" /></a>
 									</div>
 								</div>
 							</div>
@@ -147,11 +130,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="Assets/RegAsVol/js/jquery.min.js"></script>
-			<script src="Assets/RegAsVol/js/jquery.poptrox.min.js"></script>
-			<script src="Assets/RegAsVol/js/skel.min.js"></script>
-			<script src="Assets/RegAsVol/js/util.js"></script>
-			<script src="Assets/RegAsVol/js/main.js"></script>
+			<script src="{% static 'Assets/RegAsVol/js/jquery.min.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/skel.min.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/util.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/main.js' %}"></script>
 
 	</body>
 </html>
