@@ -21,7 +21,7 @@ def GetRegisterPage(request):
 	return render(request,'forms/getReg.html',context)
 
 def GetRequestPage(request):
-	all_requests = request.objects.all()
+	all_requests = Request.objects.all()
 	context={'all_requests' : all_requests,}
 	return render(request,'forms/getReq.html',context)
 
@@ -62,9 +62,3 @@ def RequestPage(request):
 		form = RequestForm()
 
 	return render(request,"forms/reqForHelp.html", {'form' : form})
-
-
-	
-
-
-	

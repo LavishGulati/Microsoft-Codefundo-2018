@@ -25,13 +25,13 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="menu">
+			<!-- <nav id="menu">
 				<ul class="links">
 					<li><a href="homepage.html">Home</a></li>
 					<li><a href="elements.html">Elements</a></li>
 					<li><a href="generic.html">Generic</a></li>
 				</ul>
-			</nav>
+			</nav> -->
 
 		<!-- Banner -->
 			<section id="banner">
@@ -43,7 +43,7 @@
 					Help or reach out for help if you are in a disaster hit area.
 					</p>
 				</div>
-				{# <video autoplay loop muted playsinline src="Images/Homepage/banner.mp4"></video> #}
+				<!-- {# <video autoplay loop muted playsinline src="Images/Homepage/banner.mp4"></video> #} -->
 				<source src="{% static 'Images/Homepage/banner.mp4' %}" type='video/mp4'></source>
 			</section>
 
@@ -78,23 +78,32 @@
 					<section>
 						<div class="content">
 							<header>
-								<a href="{% url 'getRegister' %}" class="icon fa-list"><span class="label">Icon</span></a>
-								<h3>REGISTERED REQUESTS</h3>
+								<a href="{% url 'ContributePage' %}" class="icon fa-money"><span class="label">Icon</span></a>
+								<h3>TO CONTRIBUTE</h3>
 							</header>
-							<p>Want to help but are overwelmed by large bureaucracy? Have a look at the people in trouble and see how you can directly help individuals</p>
-							<a href="{% url 'getRegister' %}" class="button primary">See Requests!</a>
+							<p>Not able to physically help? No problem! Your small contribution goes a long way in providing relief to disaster victims across the country.</p>
+							<a href="{% url 'ContributePage' %}" class="button primary">Contribute Now!</a>
 						</div>
 					</section>
 
 					<section>
 						<div class="content">
 							<header>
-								<a href="{% url 'ContributePage' %}" class="icon fa-money"><span class="label">Icon</span></a>
-								<h3>TO CONTRIBUTE</h3>
+								<a href="{% url 'getRegister' %}" class="icon fa-list"><span class="label">Icon</span></a>
+								<h3>REGISTERED VOLUNTEERS</h3>
 							</header>
-							<p>Not able to physically help? No problem! Your small contribution goes a long way in providing relief to disaster victims across the country.</p>
-							<a href="{% url 'ContributePage' %}" class="button primary">Contribute Now!</a>
-
+							<p>The list of currently registered volunteers so people can distribute themselves among the different rescue operation tasks.</p>
+							<a href="{% url 'getRegister' %}" class="button primary">Help out!</a>
+						</div>
+					</section>
+					<section>
+						<div class="content">
+							<header>
+								<a href="{% url 'getRequest' %}" class="icon fa-hand-paper-o"><span class="label">Icon</span></a>
+								<h3>PENDING REQUESTS</h3>
+							</header>
+							<p>Want to help but are overwelmed by large bureaucracy? Have a look at the people in trouble and see how you can directly help individuals.</p>
+							<a href="{% url 'getRequest' %}" class="button primary">See Requests!</a>
 						</div>
 					</section>
 					<section>
@@ -123,8 +132,8 @@
 		<section class="wrapper">
 			<div class="inner">
 				<header class="special">
-					<h2>Faucibus consequat lorem</h2>
-					<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+					<h2>Message from the Founders</h2>
+					<p>Sitting thousands of miles away from a natural disaster can induce a feeling of helplesness. What started out as a dream to help </p>
 				</header>
 				<div class="testimonials">
 					<section>
@@ -189,20 +198,21 @@
 						</ul>
 					</section>
 					<section>
-						<h4>Magna sed ipsum</h4>
+						<h4>Follow us on</h4>
 						<ul class="plain">
-							<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-							<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-							<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-							<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							<li><a href="https://github.com/LavishGulati/Microsoft-Codefundo-2018"><i class="icon fa-github">&nbsp;</i>Project Documentation</a></li>
+							<li><a href="https://www.facebook.com/lavish.gulati"><i class="icon fa-facebook">&nbsp;</i>Lavish Gulati</a></li>
+							<li><a href="https://www.linkedin.com/in/mayank--baranwal"><i class="icon fa-linkedin-square">&nbsp;</i>Mayank Baranwal</a></li>
+							<li><a href="https://www.instagram.com/cgupta3131"><i class="icon fa-instagram">&nbsp;</i>Chirag Gupta</a></li>
 						</ul>
 					</section>
 				</div>
 				<div class="copyright">
-					&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+					&copy; 404 Disaster Not Found. All rights reserved.
 				</div>
 			</div>
 		</footer>
+
 
 		<!-- Scripts -->
 			<script src="{% static 'Assets/Homepage/js/jquery.min.js' %}"></script>

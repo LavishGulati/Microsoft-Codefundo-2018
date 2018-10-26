@@ -1,14 +1,157 @@
-{% if all_registers %}
+<!-- {% if all_registers %}
 	<ul>
 		{% for registers in all_registers %}
 
 		<li>{{registers.name }}</li>
 
 		{% endfor %}
-		
+
 	</ul>
 
 {% else %}
 	<h3> You don't have any registers </h3>
 
-{% endif %}
+{% endif %} -->
+
+<!-- <html>
+
+<head>
+	{% load staticfiles %}
+	<title>Register As A Volunteer</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="{% static 'Assets/getReg/css/main.css' %}" />
+	<title></title>
+</head>
+
+<body>
+
+<div class="table-wrapper">
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Contact</th>
+				<th>Profession</th>
+				<th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for registers in all_registers %}
+			<tr>
+				<td>{{registers.name }}</td>
+				<td>{{registers.contact}}</td>
+				<td>{{registers.profession}}</td>
+				<td>{{registers.location}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="2"></td>
+				<td>360.00</td>
+			</tr>
+		</tfoot>
+
+	</table>
+</div>
+
+<script src="{% static 'Assets/getReg/js/jquery.min.js' %}"></script>
+<script src="{% static 'Assets/getReg/js/jquery.poptrox.min.js' %}"></script>
+<script src="{% static 'Assets/getReg/js/skel.min.js' %}"></script>
+<script src="{% static 'Assets/getReg/js/util.js' %}"></script>
+<script src="{% static 'Assets/getReg/js/main.js' %}"></script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE HTML>
+<!--
+	Caminar by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		{% load staticfiles %}
+		<title>Registered Volunteers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'Assets/RegAsVol/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+
+						<header class="special">
+							<h2>Registered Volunteers</h2>
+							<h5>404 DISASER NOT FOUND</h5>
+						</header>
+						<div class="content">
+
+							<table>
+								<thead>
+									<tr>
+										<th><h4>Name</h4></th>
+										<th><h4>Contact</h4></th>
+										<th><h4>Profession</h4></th>
+										<th><h4>Location</h4></th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for registers in all_registers %}
+									<tr>
+										<td>{{registers.name }}</td>
+										<td>{{registers.contact}}</td>
+										<td>{{registers.profession}}</td>
+										<td>{{registers.location}}</td>
+									</tr>
+									{% endfor %}
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Vestibulum Convallis</h2>
+							<p>vehicula urna sed justo bibendum</p>
+						</header>
+					</section>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'Assets/RegAsVol/js/jquery.min.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/skel.min.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/util.js' %}"></script>
+			<script src="{% static 'Assets/RegAsVol/js/main.js' %}"></script>
+
+	</body>
+</html>
