@@ -2719,12 +2719,57 @@
 				color: #FFF;
 			}
 
+			.spotlight.alt p {
+				color: #FFF;
+			}
+
 			.spotlight.alt .image {
 				-moz-order: 2;
 				-webkit-order: 2;
 				-ms-order: 2;
 				order: 2;
 			}
+
+		.spot {
+			background: #1e1f23;
+			color: rgba(255, 255, 255, 0.25);
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: block;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		.spot > * {
+			-moz-flex-shrink: 1;
+			-webkit-flex-shrink: 1;
+			-ms-flex-shrink: 1;
+			flex-shrink: 1;
+			-moz-flex-grow: 0;
+			-webkit-flex-grow: 0;
+			-ms-flex-grow: 0;
+			flex-grow: 0;
+		}
+
+		.spot h3 {
+			color: #FFF;
+		}
+
+		.spot p:last-child {
+			margin: 0;
+		}
+
+		.spot .inner2 {
+			padding: 3rem;
+		}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3120,13 +3165,14 @@
 				color: #FFF;
 			}
 
+			.wrapper.style2 header h5 {
+				text-transform: uppercase;
+				color: #FFF;
+			}
+
 				.wrapper.style2 header h2:after {
 					background-color: rgba(255, 255, 255, 0.125);
 				}
-
-			.wrapper.style2 header p {
-				color: rgba(255, 255, 255, 0.25);
-			}
 
 		@media screen and (max-width: 1280px) {
 
