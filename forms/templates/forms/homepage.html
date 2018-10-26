@@ -43,7 +43,7 @@
 					Help or reach out for help if you are in a disaster hit area.
 					</p>
 				</div>
-				{# <video autoplay loop muted playsinline src="Images/Homepage/banner.mp4"></video> #}
+				<!-- {# <video autoplay loop muted playsinline src="Images/Homepage/banner.mp4"></video> #} -->
 				<source src="{% static 'Images/Homepage/banner.mp4' %}" type='video/mp4'></source>
 			</section>
 
@@ -78,22 +78,31 @@
 					<section>
 						<div class="content">
 							<header>
-								<a href="#" class="icon fa-list"><span class="label">Icon</span></a>
-								<h3>REGISTERED REQUESTS</h3>
-							</header>
-							<p>Want to help but are overwelmed by large bureaucracy? Have a look at the people in trouble and see how you can directly help individuals</p>
-							<a href="{% url 'getRegister' %}" class="button primary">See Requests!</a>
-						</div>
-					</section>
-
-					<section>
-						<div class="content">
-							<header>
 								<a href="#" class="icon fa-money"><span class="label">Icon</span></a>
 								<h3>TO CONTRIBUTE</h3>
 							</header>
 							<p>Not able to physically help? No problem! Your small contribution goes a long way in providing relief to disaster victims across the country.</p>
 							<a href="toContri.html" class="button primary">Contribute Now!</a>
+						</div>
+					</section>
+					<section>
+						<div class="content">
+							<header>
+								<a href="#" class="icon fa-list"><span class="label">Icon</span></a>
+								<h3>REGISTERED VOLUNTEERS</h3>
+							</header>
+							<p>The list of currently registered volunteers so people can distribute themselves among the different rescue operation tasks.</p>
+							<a href="{% url 'getRegister' %}" class="button primary">Help out!</a>
+						</div>
+					</section>
+					<section>
+						<div class="content">
+							<header>
+								<a href="#" class="icon fa-hand-paper-o"><span class="label">Icon</span></a>
+								<h3>PEDNDING REQUESTS</h3>
+							</header>
+							<p>Want to help but are overwelmed by large bureaucracy? Have a look at the people in trouble and see how you can directly help individuals.</p>
+							<a href="{% url 'getRegister' %}" class="button primary">See Requests!</a>
 						</div>
 					</section>
 					<section>
@@ -188,20 +197,21 @@
 						</ul>
 					</section>
 					<section>
-						<h4>Magna sed ipsum</h4>
+						<h4>Follow us on</h4>
 						<ul class="plain">
 							<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-							<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+							<li><a href="https://www.facebook.com/lavish.gulati"><i class="icon fa-facebook">&nbsp;</i>Lavish Gulati</a></li>
 							<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
 							<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 						</ul>
 					</section>
 				</div>
 				<div class="copyright">
-					&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+					&copy; 404 Disaster Not Found. All rights reserved.
 				</div>
 			</div>
 		</footer>
+
 
 		<!-- Scripts -->
 			<script src="{% static 'Assets/Homepage/js/jquery.min.js' %}"></script>

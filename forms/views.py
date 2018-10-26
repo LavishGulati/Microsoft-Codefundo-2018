@@ -33,6 +33,3 @@ def RegisterPage(request):
 
 
 	return render(request,"forms/regAsVol.html", {'form' : form})
-
-
-	

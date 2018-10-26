@@ -568,7 +568,7 @@ ul {
   ul li {
     padding-left: 0.325rem; }
   ul.plain {
-    list-style: none;
+    list-salttyle: none;
     padding-left: 0; }
     ul.plain li {
       margin-bottom: 1rem; }
