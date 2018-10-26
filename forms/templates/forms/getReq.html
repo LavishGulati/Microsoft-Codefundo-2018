@@ -1,0 +1,14 @@
+{% if all_requests %}
+	<ul>
+		{% for request in all_requests %}
+
+		<li>{{request.name}}</li>
+
+		{% endfor %}
+		
+	</ul>
+
+{% else %}
+	<h3> You don't have any requests </h3>
+
+{% endif %}

@@ -2,10 +2,11 @@
 
 <html>
 	<head>
+		{% load staticfiles %}
 		<title>Contact Info</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="Assets/contactInfo/css/main.css" />
+		<link rel="stylesheet" href="{% static 'Assets/contactInfo/css/main.css' %}" />
 	</head>
 	<body>
 
@@ -24,7 +25,7 @@
 				<!-- Three -->
 					<section id="three" class="wrapper">
 						<div class="spotlight">
-							<div class="image flush"><img src="Images/contactInfo/pic06.jpg" alt="" /></div>
+							<div class="image flush"><img src="{% static 'Images/contactInfo/pic06.jpg' %}" alt="" /></div>
 							<div class="inner">
 								<h3>NDMA - National Disaster Management Authority</h3>
 								<p>Founded in 2005 through the Disaster Management Act, NDMA is the agency that coordinate response to natural or man-made disasters. For a long period of time, disaster management was relegated to states that resulted in a haphazard unocordinated effort.	The organization lays down guidelines, frames policies and coordinates with State Disaster MAnagement Authorities. It is organized into the following divisions:
@@ -38,7 +39,7 @@
 							</div>
 						</div>
 						<div class="spotlight alt">
-							<div class="image flush"><img src="Images/contactInfo/pic07.jpg" alt="" /></div>
+							<div class="image flush"><img src="{% static 'Images/contactInfo/pic07.jpg' %}" alt="" /></div>
 							<div  class="inner">
 								<h3>NIDM - National Institute of Disaster Management</h3>
 								<p>The NIDM is a premier institute for training and capacity development programs to manage natural disasters in India. The insitute speacializes in resarch, documentation and disaster manangement related information in a national level database. It also conducts mock drills to coordiante responses to natural disasters such as earthquakes and tsunamis.
@@ -46,7 +47,7 @@
 							</div>
 						</div>
 						<div class="spotlight">
-							<div class="image flush"><img src="Images/contactInfo/pic08.jpg" alt="" /></div>
+							<div class="image flush"><img src="{% static 'Images/contactInfo/pic08.jpg' %}" alt="" /></div>
 							<div class="inner">
 								<h3>NDRF - National Disaster Response Force</h3>
 								<p>The NDRF is a specialised force that specializes for responses in life threatening disasters situations. It is composed of 12 battalions along the lines of paramillitary forces in India. Each batallion is composed of a variety of search and rescue specialists including but not limited to technicians, paramedics, electricians and dog swauds. Till date, NDRF has saved 1,33,192 human lives and retrieved 276 dead bodies of disaster victims in 73 response operations in the country. The NDRF also has special battalions capable of responding to radiological, nuclear, biological and chemical disasters
@@ -72,11 +73,11 @@
 		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
 
 	</body>
 </html>

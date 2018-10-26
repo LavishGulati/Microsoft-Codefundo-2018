@@ -58,7 +58,7 @@
 					<section>
 						<div class="content">
 							<header>
-								<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+								<a href="{% url 'RegisterPage' %}" class="icon fa-vcard-o"><span class="label">Icon</span></a>
 								<h3>REGISTER AS A VOLUNTEER</h3>
 							</header>
 							<p>Lend a helping hand to those who are in need. Volunteers provide a greatly needed human touch to the operation.</p>
@@ -68,17 +68,17 @@
 					<section>
 						<div class="content">
 							<header>
-								<a href="#" class="icon fa-life-ring"><span class="label">Icon</span></a>
+								<a href="{% url 'RequestPage' %}" class="icon fa-life-ring"><span class="label">Icon</span></a>
 								<h3>REQUEST FOR HELP</h3>
 							</header>
 							<p>Need help? Look no further. Tell us where you are and in what type of trouble you are in and you'll be rescued in no time.</p>
-							<a href="#" class="button primary">SOS!</a>
+							<a href="{% url 'RequestPage' %}" class="button primary">SOS!</a>
 						</div>
 					</section>
 					<section>
 						<div class="content">
 							<header>
-								<a href="#" class="icon fa-list"><span class="label">Icon</span></a>
+								<a href="{% url 'getRegister' %}" class="icon fa-list"><span class="label">Icon</span></a>
 								<h3>REGISTERED REQUESTS</h3>
 							</header>
 							<p>Want to help but are overwelmed by large bureaucracy? Have a look at the people in trouble and see how you can directly help individuals</p>
@@ -89,21 +89,22 @@
 					<section>
 						<div class="content">
 							<header>
-								<a href="#" class="icon fa-money"><span class="label">Icon</span></a>
+								<a href="{% url 'ContributePage' %}" class="icon fa-money"><span class="label">Icon</span></a>
 								<h3>TO CONTRIBUTE</h3>
 							</header>
 							<p>Not able to physically help? No problem! Your small contribution goes a long way in providing relief to disaster victims across the country.</p>
-							<a href="toContri.html" class="button primary">Contribute Now!</a>
+							<a href="{% url 'ContributePage' %}" class="button primary">Contribute Now!</a>
+
 						</div>
 					</section>
 					<section>
 						<div class="content">
 							<header>
-								<a href="#" class="icon fa-phone"><span class="label">Icon</span></a>
+								<a href="{% url 'ContactPage' %}" class="icon fa-phone"><span class="label">Icon</span></a>
 								<h3>CONTACT INFO</h3>
 							</header>
 							<p>Have a look at the different efforts of the Government of India and NGOs to save people's lives and minimize the impact of natural disasters.</p>
-							<a href="#" class="button primary">Contact Us</a>
+							<a href="{% url 'ContactPage' %}" class="button primary">Contact Us</a>
 						</div>
 					</section>
 				</div>

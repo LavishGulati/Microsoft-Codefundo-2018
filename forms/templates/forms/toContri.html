@@ -2,10 +2,11 @@
 
 <html>
 	<head>
+		{% load staticfiles %}
 		<title>Caminar by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="Assets/ToContri/css/main.css" />
+		<link rel="stylesheet" href="{% static 'Assets/ToContri/css/main.css' %}" />
 	</head>
 	<body>
 
@@ -24,7 +25,7 @@
 				<!-- Three -->
 					<section id="three" class="wrapper">
 						<div class="spotlight">
-							<div class="image flush"><img src="Images/ToContri/pic06.jpg" alt="" /></div>
+							<div class="image flush"><img src="{% static 'Images/ToContri/pic06.jpg' %}" alt="" /></div>
 							<div class="inner">
 								<h3>Prime Minister's National Relief Fund</h3>
 								<p>The Prime Minister's National Relief Fund (PMNRF) was established with public contributions to assist displaced persons from Pakistan. The resources of the PMNRF are now utilized primarily to render immediate relief to families of those killed in natural calamities like floods, cyclones and earthquakes, etc. and to the victims of the major accidents and riots. The fund consists entirely of public contributions and does not get any budgetary support.
@@ -33,7 +34,7 @@
 							</div>
 						</div>
 						<div class="spotlight alt">
-							<div class="image flush"><img src="Images/ToContri/pic07.jpg" alt="" /></div>
+							<div class="image flush"><img src="{% static 'Images/ToContri/pic07.jpg' %}" alt="" /></div>
 							<div  class="inner">
 								<h3>Rapid Response</h3>
 								<p>Rapid Response is a registered non-profit organisation committed to provide disaster response and preparedness services to the vulnerable communities.
@@ -43,7 +44,7 @@
 							</div>
 						</div>
 						<div class="spotlight">
-							<div class="image flush"><img src="Images/ToContri/pic08.jpg" alt="" /></div>
+							<div class="image flush"><img src="{% static 'Images/ToContri/pic08.jpg' %}" alt="" /></div>
 							<div class="inner">
 								<h3>Indian Red Cross Society</h3>
 								<p>The Indian Red Cross is a voluntary humanitarian organization having a network of over 700 branches throughout the country, providing relief in times of disasters/emergencies and promotes health & care of the vulnerable people and communities. It is a leading member of the largest independent humanitarian organization in the world, the International Red Cross & Red Crescent Movement.
@@ -75,11 +76,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
 
 	</body>
 </html>

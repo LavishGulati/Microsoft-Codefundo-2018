@@ -6,10 +6,11 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 -->
 <html>
 <head>
+	{% load staticfiles %}
 	<title>Request for Help</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="Assets/ReqForHelp/css/main.css" />
+	<link rel="stylesheet" href="{% static 'Assets/ReqForHelp/css/main.css' %}" />
 </head>
 <body>
 
@@ -22,12 +23,13 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 
 				<header class="special">
 					<h2>Request for Help</h2>
-					<p>Your one-stop guide to availing rescue services</p>
+					<p><strong>Your one-stop guide to availing rescue services</strong></p>
 				</header>
 				<div class="content">
-					<p>Stuck in the middle of a catastrophe and unable to raise your voice and be heard? Don't worry, we've got you covered. Just fill out this form and an official/volunteer will contact you vey soon and provide you with all the .</p>
+					<p><strong>Stuck in the middle of a catastrophe and unable to raise your voice and be heard? Don't worry, we've got you covered. Just fill out this form and an official/volunteer will contact you vey soon and provide you with all the .</strong>	</p>
 
 					<form method="post" action="#">
+					{% csrf_token %}
 						<div class="row uniform">
 
 
@@ -36,116 +38,51 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 								<p>1) Enter your contact details</p>
 							</div>
 							<div class="6u 12u$(xsmall)">
-								<input type="text" name="name" id="name" value="" placeholder="Name" />
+								<input type="text" name="name" id="name" value="" placeholder="Name" required/>
 							</div>
 							<div class="6u$ 12u$(xsmall)">
-								<input type="tel" name="contact" id="contact" value="" placeholder="Contact No." />
+								<input type="tel" name="contact" id="contact" value="" placeholder="Contact No." required/>
 							</div>
 							<div class="12u$">
-								<textarea name="message" id="message" placeholder="Current location/address" rows="3"></textarea>
+								<textarea name="message" id="message" required placeholder="Current Location/Address" rows="3"></textarea>
 							</div>
 							<!-- Break -->
 
 							<div class="12u$">
-								<fieldset>
 									<div class="row question_title">
-										<p>2) As a result of this disaster, do you need assistance in any of the following categories?<br><br /></p>
-									</div>
-
-									<div class="row">
-										<div class="col-md-12">
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="Employment" name="checkbox">
-												<label for="Employment">Employment</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="Financial" name="checkbox">
-												<label for="Financial">Financial</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="Food" name="checkbox">
-												<label for="Food">Food</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="Housing" name="checkbox">
-												<label for="Housing">Housing</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="Legal" name="checkbox">
-												<label for="Legal">Legal</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="Medical" name="checkbox">
-												<label for="Medical">Medical</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="Other" name="checkbox">
-												<label for="Other">Other</label>
-											</div>
-										</div>
-									</div>
-								</fieldset>
+										<p>2) As a result of this disaster,in what categories do you need assistance?(Employment, Financial, Food, Housing, Legal, Medical, Others(Specify)</p>
+									<div class="12u$">
+								<textarea name="message" id="message" rows="2"></textarea>
 							</div>
+							<br></br>
+							<div class="row question_title">
+									<p>3) Any special assistance needed?<br></br></p>
+									</div>
 
 							<div class="12u$">
-								<textarea name="message" id="message" placeholder="Any special assistance needed?" rows="3"></textarea>
+								<textarea name="message" id="message" rows="2"></textarea>
 							</div>
+
+							<br></br>
+							<div class="12u$">
+									<div class="row question_title">
+										<p>4) What describes your housing/living situation prior to the disaster?(Rent, Own or Urban)<br></br></p>
+									</div>
 
 							<div class="12u$">
-								<fieldset>
-									<div class="row question_title">
-										<p>3) What describes your housing/living situation prior to the disaster??<br><br /></p>
-									</div>
-
-									<div class="row">
-										<div class="col-md-12">
-											<div class="col-4 col-12-small">
-												<input type="checkbox" id="Rent" name="checkbox" >
-												<label for="Rent">Rent</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="checkbox" id="Own" name="checkbox" >
-												<label for="Own">Own</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="checkbox" id="Urban" name="checkbox" >
-
-												<label for="Urban">Urban</label>
-											</div>
-										</div>
-									</div>
-								</fieldset>
+								<textarea name="message" id="message" rows="2"></textarea>
 							</div>
-
+							</div>
+							<br></br>
 							<div class="12u$">
-								<fieldset>
 									<div class="row question_title">
-										<p>4) Current priority of assistance required?<br><br /></p>
+										<p>5) Current priority of assistance required?(Very High, High, Medium or Low)<br></br></p>
 									</div>
-
-									<div class="row">
-										<div class="col-md-12">
-											<div class="col-4 col-12-small">
-												<input type="radio" id="Very-high" name="radio" unchecked>
-												<label for="Very-high">Very high</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="High" name="radio" unchecked>
-												<label for="High">High</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="Medium" name="radio" unchecked>
-												<label for="Medium">Medium</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="Low" name="radio" unchecked>
-												<label for="Low">Low</label>
-											</div>
-										</div>
-									</div>
-								</fieldset>
+								<div class="12u$">
+								<textarea name="message" id="message" rows="2"></textarea>
 							</div>
-
+							<br></br>
+							</div>
 
 
 
@@ -157,10 +94,6 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 									<label for="copy">Email me a copy of this message</label>
 								</div> -->
 
-								<div class="6u$ 12u$(small)">
-									<input type="checkbox" id="human" name="human" checked>
-									<label for="human">I am a human and not a robot</label>
-								</div>
 								<!-- Break -->
 								<div class="12u$">
 									<ul class="actions">
@@ -185,22 +118,22 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 						<div class="gallery">
 							<div>
 								<div class="image fit flush">
-									<a href="Images/ReqForHelp/pic03.jpg"><img src="Images/ReqForHelp/pic03.jpg" alt="" /></a>
+									<a href="{% static 'Images/ReqForHelp/pic03.jpg' %}"><img src="{% static 'Images/ReqForHelp/pic03.jpg' %}" alt="" /></a>
 								</div>
 							</div>
 							<div>
 								<div class="image fit flush">
-									<a href="Images/ReqForHelp/pic01.jpg"><img src="Images/ReqForHelp/pic01.jpg" alt="" /></a>
+									<a href="{% static 'Images/ReqForHelp/pic01.jpg' %}"><img src="{% static 'Images/ReqForHelp/pic01.jpg' %}" alt="" /></a>
 								</div>
 							</div>
 							<div>
 								<div class="image fit flush">
-									<a href="Images/ReqForHelp/pic04.jpg"><img src="Images/ReqForHelp/pic04.jpg" alt="" /></a>
+									<a href="{% static 'Images/ReqForHelp/pic04.jpg' %}"><img src="{% static 'Images/ReqForHelp/pic04.jpg' %}" alt="" /></a>
 								</div>
 							</div>
 							<div>
 								<div class="image fit flush">
-									<a href="Images/ReqForHelp/pic05.jpg"><img src="Images/ReqForHelp/pic05.jpg" alt="" /></a>
+									<a href="{% static 'Images/ReqForHelp/pic05.jpg' %}"><img src="{% static 'Images/ReqForHelp/pic05.jpg' %}" alt="" /></a>
 								</div>
 							</div>
 						</div>
@@ -219,11 +152,11 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 		</footer>
 
 		<!-- Scripts -->
-		<script src="Assets/ReqForHelp/js/jquery.min.js"></script>
-		<script src="Assets/ReqForHelp/js/jquery.poptrox.min.js"></script>
-		<script src="Assets/ReqForHelp/js/skel.min.js"></script>
-		<script src="Assets/ReqForHelp/js/util.js"></script>
-		<script src="Assets/ReqForHelp/js/main.js"></script>
+		<script src="{% static 'Assets/ReqForHelp/js/jquery.min.js' %}"></script>
+		<script src="{% static 'Assets/ReqForHelp/js/jquery.poptrox.min.js' %}"></script>
+		<script src="{% static 'Assets/ReqForHelp/js/skel.min.js' %}"></script>
+		<script src="{% static 'Assets/ReqForHelp/js/util.js' %}"></script>
+		<script src="{% static 'Assets/ReqForHelp/js/main.js' %}"></script>
 
 	</body>
 	</html>
